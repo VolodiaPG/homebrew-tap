@@ -10,7 +10,7 @@ cask "helium-chromium" do
   desc "Bullshit-free web browser, based on Chromium."
   homepage "https://github.com/imputnet/helium-macos"
 
-  url "https://github.com/imputnet/helium-macos/releases/download/#{version}/helium_#{version}-#{version_chromium}_#{arch}-macos.dmg"
+  url "https://github.com/imputnet/helium-macos/releases/download/#{version}-#{version_chromium}/helium_#{version}_#{arch}-macos.dmg"
 
   livecheck do
     url :url
