@@ -12,17 +12,6 @@ cask "helium-chromium" do
 
   url "https://github.com/imputnet/helium-macos/releases/download/#{version}-#{version_chromium}/helium_#{version}_#{arch}-macos.dmg"
 
-  livecheck do
-    url :url
-    regex(/^(\d+(?:[.-_]\d+)+)(?:[._-]#{arch})?(?:[._-]+?(\d+(?:\.\d+)*))?$/i)
-    strategy :github_latest do |json, regex|
-      match = json["tag_name"]&.match(regex)
-      next if match.blank?
-
-      match[1]
-    end
-  end
-
   conflicts_with cask: "chromium"
   depends_on macos: ">= :big_sur"
 
