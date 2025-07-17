@@ -8,13 +8,13 @@ cask "helium-chromium" do
 
   url "https://github.com/imputnet/helium-macos/releases/download/#{version}-#{version_chromium}/helium_#{version}_#{arch}-macos.dmg"
   name "Helium"
-  desc "Bullshit-free web browser, based on Chromium."
+  desc "Bullshit-free web browser, based on Chromium"
   homepage "https://github.com/imputnet/helium-macos"
 
   conflicts_with cask: "chromium"
   depends_on macos: ">= :big_sur"
 
-  app "Helium.app"  # Adjust if the bundle name is different
+  app "Helium.app"
 
   zap trash: [
     "~/Library/Application Support/net.imput.helium",
