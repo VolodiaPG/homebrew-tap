@@ -7,7 +7,6 @@ cask "helium-chromium" do
          intel: "e179ba763a588f8590986577392bb9e54cf2d088631ec440a5cf5cebf272a78b"
 
   url "https://github.com/imputnet/helium-macos/releases/download/#{version}-#{version_chromium}/helium_#{version}_#{arch}-macos.dmg"
-
   name "Helium"
   desc "Bullshit-free web browser, based on Chromium."
   homepage "https://github.com/imputnet/helium-macos"
