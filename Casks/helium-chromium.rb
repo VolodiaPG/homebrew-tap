@@ -6,11 +6,11 @@ cask "helium-chromium" do
   sha256 arm:   "4cfcde22cc8826ea1b50848cc1aaecf162d69e729b1474bc4a81376c933faf6b",
          intel: "e179ba763a588f8590986577392bb9e54cf2d088631ec440a5cf5cebf272a78b"
 
+  url "https://github.com/imputnet/helium-macos/releases/download/#{version}-#{version_chromium}/helium_#{version}_#{arch}-macos.dmg"
+
   name "Helium"
   desc "Bullshit-free web browser, based on Chromium."
   homepage "https://github.com/imputnet/helium-macos"
-
-  url "https://github.com/imputnet/helium-macos/releases/download/#{version}-#{version_chromium}/helium_#{version}_#{arch}-macos.dmg"
 
   conflicts_with cask: "chromium"
   depends_on macos: ">= :big_sur"
