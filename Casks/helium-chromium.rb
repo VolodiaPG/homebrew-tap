@@ -11,11 +11,6 @@ cask "helium-chromium" do
   desc "Bullshit-free web browser, based on Chromium"
   homepage "https://github.com/imputnet/helium-macos"
 
-  conflicts_with cask: "chromium"
-  depends_on macos: ">= :big_sur"
-
-  app "Helium.app"
-
   livecheck do
     url "https://github.com/imputnet/helium-macos/releases/latest"
     regex(/^(\d+(?:\.\d+)+)$/i)
@@ -30,6 +25,11 @@ cask "helium-chromium" do
       end
     end
   end
+
+  conflicts_with cask: "chromium"
+  depends_on macos: ">= :big_sur"
+
+  app "Helium.app"
 
   zap trash: [
     "~/Library/Application Support/net.imput.helium",
