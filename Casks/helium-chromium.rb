@@ -16,6 +16,21 @@ cask "helium-chromium" do
 
   app "Helium.app"
 
+  livecheck do
+    url "https://github.com/imputnet/helium-macos/releases/latest"
+    regex(/^(\d+(?:\.\d+)+)$/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"]
+
+        match = release["name"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
+  end
+
   zap trash: [
     "~/Library/Application Support/net.imput.helium",
     "~/Library/Caches/net.imput.helium",
