@@ -15,6 +15,6 @@ jobs:
           # Required, custom GitHub access token with only the 'public_repo' scope enabled
           token: ${{secrets.BUMP_CASK_TOKEN}}
           # Bump all outdated casks in this tap
-          tap: Homebrew/homebrew-cask
+          tap: volodiapg/homebrew-tap
           livecheck: true
           dryrun: false
