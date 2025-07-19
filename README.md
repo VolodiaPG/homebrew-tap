@@ -1,17 +1,21 @@
-# Volodiapg Helium-browser
+# Volodiapg's Tap
 
 ## How do I install these formulae?
 
-`brew install volodiapg/helium-browser/<formula>`
+`brew install volodiapg/tap/<formula>`
 
-Or `brew tap volodiapg/helium-browser` and then `brew install <formula>`.
+Or `brew tap volodiapg/tap` and then `brew install <formula>`.
 
 Or, in a `brew bundle` `Brewfile`:
 
 ```ruby
-tap "volodiapg/helium-browser"
+tap "volodiapg/tap"
 brew "<formula>"
 ```
+
+## What is packaged here?
+
+- `helium-chromium`: [Helium Chromium Web Browser](https://github.com/imputnet/helium-macos)
 
 ## Documentation
 
