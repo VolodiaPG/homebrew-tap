@@ -1,9 +1,9 @@
 cask "helium-chromium" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.2.9.1-138.0.7204.100"
-  sha256 arm:   "4cfcde22cc8826ea1b50848cc1aaecf162d69e729b1474bc4a81376c933faf6b",
-         intel: "e179ba763a588f8590986577392bb9e54cf2d088631ec440a5cf5cebf272a78b"
+  version "0.2.10.1-138.0.7204.100"
+  sha256 arm:   "8c4835ce1bef48fa2362819a3db66c35526dc8fea5bb1fcecc7c3616cae34649",
+         intel: "291a52720057311d7857465539c43b9a8cc2c603cdb51b4e0c7ea818a1bae5fc"
 
   url "https://github.com/imputnet/helium-macos/releases/download/#{version}/helium_#{version.sub(/-.+$/, "")}_#{arch}-macos.dmg"
   name "Helium"
