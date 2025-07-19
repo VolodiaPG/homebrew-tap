@@ -1,24 +1,23 @@
 cask "helium-chromium" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.2.9.1"
-  version_chromium = "138.0.7204.100"
+  version "0.2.9.1-138.0.7204.100"
   sha256 arm:   "4cfcde22cc8826ea1b50848cc1aaecf162d69e729b1474bc4a81376c933faf6b",
          intel: "e179ba763a588f8590986577392bb9e54cf2d088631ec440a5cf5cebf272a78b"
 
-  url "https://github.com/imputnet/helium-macos/releases/download/#{version}-#{version_chromium}/helium_#{version}_#{arch}-macos.dmg"
+  url "https://github.com/imputnet/helium-macos/releases/download/#{version}/helium_#{version.sub(/-.+$/, "")}_#{arch}-macos.dmg"
   name "Helium"
   desc "Bullshit-free web browser, based on Chromium"
   homepage "https://github.com/imputnet/helium-macos"
 
   livecheck do
-    url "https://github.com/imputnet/helium-macos/releases/latest"
-    regex(/^(\d+(?:\.\d+)+)$/i)
+    url "https://github.com/imputnet/helium-macos/releases"
+    regex(/^(\d+(?:\.\d+){3}-\d+(?:\.\d+){3})$/i)
     strategy :github_releases do |json, regex|
       json.map do |release|
         next if release["draft"]
 
-        match = release["name"]&.match(regex)
+        match = release["tag_name"]&.match(regex)
         next if match.blank?
 
         match[1]
