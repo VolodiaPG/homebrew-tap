@@ -1,22 +1,21 @@
 # Volodiapg's Tap
 
-## How do I install these formulae?
+## How do I install these casks?
 
-`brew install volodiapg/tap/<formula>`
+`brew install --cask volodiapg/tap/<cask>`
 
-Or `brew tap volodiapg/tap` and then `brew install <formula>`.
+Or `brew tap volodiapg/tap` and then `brew install --cask <cask>`.
 
 Or, in a `brew bundle` `Brewfile`:
 
 ```ruby
 tap "volodiapg/tap"
-brew "<formula>"
+cask "<cask>"
 ```
 
 ## What is packaged here?
 
-- `helium-chromium`: [Helium Chromium Web Browser](https://github.com/imputnet/helium-macos)
-- `sone`: [SONE](https://github.com/VolodiaPG/sone), a native desktop client for TIDAL (Apple Silicon only)
+- `sone`: [SONE](https://github.com/VolodiaPG/sone), a native desktop client for TIDAL (Apple Silicon only). Each new SONE release updates this cask.
 
 ## Documentation
 
