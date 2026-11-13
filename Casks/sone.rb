@@ -1,6 +1,6 @@
 cask "sone" do
-  version "0.24.0"
-  sha256 "11b42a4b66512e531ad6eab0cc9b83c51d0cb152ef5f07615356307e361402b5"
+  version "0.24.1"
+  sha256 "d6091242183d45a121f47e1f1c2c40252b2f35916fa418494e6349c42cc7d1c6"
 
   url "https://github.com/VolodiaPG/sone/releases/download/v#{version}/SONE_#{version}_aarch64.dmg"
   name "SONE"
