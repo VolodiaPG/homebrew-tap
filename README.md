@@ -16,6 +16,7 @@ brew "<formula>"
 ## What is packaged here?
 
 - `helium-chromium`: [Helium Chromium Web Browser](https://github.com/imputnet/helium-macos)
+- `sone`: [SONE](https://github.com/VolodiaPG/sone), a native desktop client for TIDAL (Apple Silicon only)
 
 ## Documentation
 
